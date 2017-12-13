@@ -9,9 +9,9 @@ var doubleArray = function(arr) {
   var result = [];
   for (var i = 0; i < arr.length; i++) {
     result.push(arr[i] * 2) 
-  }
-  return result
-}
+  };
+  return result;
+};
 
 /* #sumArrays
  *
@@ -21,7 +21,24 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+var sumArrays = function(arr1,arr2) {
+var group1 = [];
+var group2 = [];
+for (var i = 0; i < arr1.length; i++) {
+  group1.push(arr1[i]);
+};
+for (var i = 0; i < arr2.length; i++) {
+  group2.push(arr2[i]);
+};
+var sum1 = group1.reduce(function (prev,curr){
+  return prev + curr;
+});
+var sum2 = group2.reduce(function (prev,curr){
+  return prev + curr;
+});
+return sum1 + sum2;
+};
+
 
 /* #stringCount
  *
@@ -379,15 +396,15 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null, 
-  stringCount: null,
-  arrayLength: null,
-  countAll: null,
-  countStrings: null,
-  countAllStrings: null,
-  convertToArray: null,
-  objectSize: null,
+  doubleArray: doubleArray,
+  sumArrays: sumArrays, 
+  stringCount: stringCount,
+  arrayLength: arrayLength,
+  countAll: countAll,
+  countStrings: countStrings,
+  countAllStrings: countAllStrings,
+  convertToArray: convertToArray,
+  objectSize: objectSize,
   createZeroFilledArray: null,
   poppedArray: null,
   splitString: null,
