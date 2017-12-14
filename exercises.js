@@ -47,7 +47,10 @@ return sum1 + sum2;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+var stringCount = function(str){
+  var size = str.length;
+  return size;
+}
 
 /* #arrayLength
  *
