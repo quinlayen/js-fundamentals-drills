@@ -59,7 +59,11 @@ var stringCount = function(str){
  * @param {String}
  * @return {Number}
  */
-var arrayLength;
+var arrayLength = function(arr){
+  var size = arr.length;
+  //actual.push(arr);
+  return size;
+};
 
 /* #countAll
  *
