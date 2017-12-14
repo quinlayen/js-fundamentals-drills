@@ -61,7 +61,6 @@ var stringCount = function(str){
  */
 var arrayLength = function(arr){
   var size = arr.length;
-  //actual.push(arr);
   return size;
 };
 
@@ -72,7 +71,12 @@ var arrayLength = function(arr){
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function(arr){
+ const result = arr.reduce(function(prev, curr){
+return prev + curr;
+ });
+ return result;
+}
 
 /* #countStrings
  *
