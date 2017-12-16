@@ -71,13 +71,19 @@ var arrayLength = function(arr){
  * @param {Array}
  * @return {Number}
  */
+// var countAll = function(arr){
+//  const result = arr.reduce(function(prev, curr){
+// return prev + curr;
+//  });
+//  return result;
+// }
 var countAll = function(arr){
- const result = arr.reduce(function(prev, curr){
-return prev + curr;
- });
- return result;
-}
-
+  result = 0;
+  for (var i = 0; i < arr.length; i++){
+    result += arr[i];
+  };
+  return result;
+};
 /* #countStrings
  *
  * Takes in an array of strings and returns an array of string lengths.
@@ -85,7 +91,13 @@ return prev + curr;
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+var countStrings = function(arr){
+  result = [];
+  for (var i = 0; i < arr.length; i++){
+    result.push(arr[i].length);
+  }
+  return result;
+};
 
 /* #countAllStrings
  *
@@ -416,9 +428,9 @@ module.exports = {
   countAllStrings: countAllStrings,
   convertToArray: convertToArray,
   objectSize: objectSize,
-  createZeroFilledArray: null,
-  poppedArray: null,
-  splitString: null,
+  createZeroFilledArray: createZeroFilledArray,
+  poppedArray: poppedArray,
+  splitString: splitString,
   lengthOfLast: null,
   sumBelowTen: null,
   moreThanTenLetters: null,
