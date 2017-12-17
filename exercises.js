@@ -147,8 +147,17 @@ var objectSize = function(obj){
  * @param {Number}
  * @return {Zero}
  */
-var createZeroFilledArray;
-
+var createZeroFilledArray = function (num){
+  finalResult = [];
+  numResult = 0;
+  for (var i = 0; i < num; i++){
+    return numResult = num.length;
+  }
+  for (var i = 0; i < numResult; i++){
+    push.finalResult[numResult[i]]
+  }
+  return result;
+}
 /* #poppedArray
  *
  * Takes in an array of numbers and returns an array of all but the last element of the array.
@@ -156,7 +165,10 @@ var createZeroFilledArray;
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+var poppedArray = function(arr){
+  //for (var i=0; i<arr.length; i++){
+    return arr.slice(0,2);
+}
 
 /* #splitString
  *
