@@ -124,6 +124,7 @@ var countAllStrings = function(str){
 var convertToArray = function(obj){
   result = Object.values(obj);
   return result
+
 }
 
 /* #objectSize
@@ -216,7 +217,17 @@ var sumBelowTen = function (arr){
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters = function(arr){
+  result = [];
+  for (var i=0; i < arr.length;i++){
+    if(arr[i].length > 10){
+      result.push(arr[i]);
+    }
+  }
+  return result.length;
+ 
+}
+
 
 /* #multiplyAll
  *
