@@ -236,7 +236,13 @@ var moreThanTenLetters = function(arr){
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+var multiplyAll = function(arr){
+  result = 1;
+  for (var i = 0; i<arr.length;i++){
+    result *= arr[i];
+  }
+  return result;
+}
 
 /* #getKeys
  *
@@ -245,7 +251,10 @@ var multiplyAll;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function(obj){
+  result = Object.keys(obj);
+  return result;
+}
 
 /* #sumAllPositive
  *
