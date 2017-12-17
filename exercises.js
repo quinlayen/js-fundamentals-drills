@@ -263,7 +263,15 @@ var getKeys = function(obj){
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+var sumAllPositive = function(num){
+  result = 0;
+  for (var i=0; i<num.length; i++){
+    if(num[i]>0){
+      result += num[i];
+    }
+  }
+  return result;
+}
 
 /* #stringCountBelowThree
  *
