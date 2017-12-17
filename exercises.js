@@ -166,7 +166,6 @@ var createZeroFilledArray = function (num){
  * @return {Array}
  */
 var poppedArray = function(arr){
-  //for (var i=0; i<arr.length; i++){
     return arr.slice(0,2);
 }
 
@@ -177,7 +176,9 @@ var poppedArray = function(arr){
  * @param {String}
  * @return {Array}
  */
-var splitString;
+var splitString = function (str){
+return str.split('');
+}
 
 /* #lengthOfLast
  *
