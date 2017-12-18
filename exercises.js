@@ -309,7 +309,12 @@ var countObjects = function(arr){
  * @return {Array}
  */
 var getObjectKeys = function (obj){
-  result = Object.keys(obj);
+  // result = Object.keys(obj);
+  // return result;
+  result = [];
+  for (var key in obj){
+    result.push(key);
+  }
   return result;
 }
 
@@ -320,7 +325,13 @@ var getObjectKeys = function (obj){
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+var getObjectValues = function (obj){
+  result = [];
+  for (var key in obj){
+   result.push(obj[key]);
+ }
+ return result;
+}
 
 /* #makeObject
  *
