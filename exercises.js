@@ -414,7 +414,13 @@ var strToKeys = function (arr){
  * @param {Object}
  * @return {Array}
  */
-var getValues;
+var getValues = function (obj){
+  result = [];
+for (var key in obj){
+  result.push(obj[key]);
+}
+  return result;
+}
 
 /* #getKeys
  *
@@ -423,7 +429,13 @@ var getValues;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function (obj){
+  result = [];
+  for (var key in obj){
+    result.push(key);
+  }
+  return result;
+}
 
 /* #objectToArray
  *
