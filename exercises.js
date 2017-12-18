@@ -355,7 +355,11 @@ return result;
  * @param {String}
  * @return {Bool}
  */
-var makeObjectReverse;
+var makeObjectReverse = function(key, value){
+  result = {};
+  result[value] = key;
+  return result;
+}
 
 /* #tupleToObject
  *
