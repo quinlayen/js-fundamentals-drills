@@ -447,10 +447,13 @@ var getKeys = function (obj){
  */
 var objectToArray = function(obj){
   result = [];
+  param = [];
+  value = [];
   for (var key in obj){
-    //result.push(key,obj[key]);
-    result.push(key);
+    param.push(key);
+    value.push(obj[key]);
     }
+result.push(param,value);
 return result;
 }
 
@@ -469,13 +472,7 @@ var arrayToObject = function (arr){
   }
   return result;
 }
-// result = {};
-// for (var i = 0; i<arr.length;i++){
-//   result[arr[i]] = false;
-// }
 
-// return result;
-// }
 
 /* #arraysToObject
  *
@@ -486,7 +483,14 @@ var arrayToObject = function (arr){
  * @param {Array}
  * @return {Object}
  */
-var arraysToObject;
+var arraysToObject = function (arr1, arr2){
+  result = {};
+  for (var i = 0; i < arr1.length && arr2.length;i++){
+    result[arr1[i]] = arr2[i];
+    }
+    return result;
+  }
+  
 
 /* #objectsToTuples
  *
