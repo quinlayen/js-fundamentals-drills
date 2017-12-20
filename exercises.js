@@ -502,6 +502,7 @@ var arraysToObject = function (arr1, arr2){
  */
 var objectsToTuples;
 
+
 /* #mapArrayValues
  *
  * takes in an array of strings and returns an object with keys of the array elements and values all set to True.
@@ -509,7 +510,13 @@ var objectsToTuples;
  * @param {Array}
  * @return {Object}
  */
-var mapArrayValues;
+var mapArrayValues = function(arr){
+  result = {};
+  for (var i = 0; i < arr.length;i++){
+    result[arr[i]] = true;
+  }
+  return result;
+}
 
 /* #mapStringCounts
  *
@@ -520,7 +527,17 @@ var mapArrayValues;
  * @param {Array}
  * @return {Object}
  */
-var mapStringCounts;
+var mapStringCounts = function (arr){
+  result = {};
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i].length>=5){
+      result[arr[i]] = true;
+    }else{
+      result[arr[i]]= false;
+    }
+  }
+  return result
+}
 
 /* #arrayToObjectNums
  *
