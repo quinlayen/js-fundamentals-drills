@@ -547,7 +547,13 @@ var mapStringCounts = function (arr){
  * @param {Array}
  * @return {Object}
  */
-var arrayToObjectNums;
+var arrayToObjectNums = function (arr){
+  var result = {};
+  for (var i=0; i<arr.length;i++){
+    result[arr[i]] = true;
+  }
+  return result;
+}
 
 /* #stringToKeys
  *
@@ -556,7 +562,14 @@ var arrayToObjectNums;
  * @param {String}
  * @return {Object}
  */
-var stringToKeys;
+var stringToKeys = function (str){
+  var result = {};
+  var splitted = str.split('');
+  for (var i=0; i<splitted.length;i++){
+    result[splitted[i]] = true;
+  }
+  return result;
+}
 
 /* #charCountMap
  *
@@ -566,7 +579,13 @@ var stringToKeys;
  * @param {Array}
  * @return {Object}
  */
-var charCountMap;
+var charCountMap = function (arr){
+  var result = {};
+  for (var i=0; i<arr.length;i++){
+    result[arr[i]] = arr[i].length
+  }
+  return result;
+}
 
 /* #frequencyMap
  *
