@@ -594,7 +594,14 @@ var charCountMap = function (arr){
  * @param {String}
  * @return {Bool}
  */
-var frequencyMap;
+ var frequencyMap;
+//   var result = {};
+//   for (var i =0; i<arr.length;i++){
+//     if(arr[i] = arr[i]{
+//       result[arr[i]]
+//     }
+//   }
+// }
 
 /* #tupleConvertToObject
  *
