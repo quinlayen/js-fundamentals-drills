@@ -160,7 +160,10 @@ var createZeroFilledArray = function (num){
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+var poppedArray = function (arr){
+  arr.pop();
+  return arr;
+}
 
 /* #splitString
  *
@@ -169,7 +172,10 @@ var poppedArray;
  * @param {String}
  * @return {Array}
  */
-var splitString;
+var splitString = function (str){
+splitted = str.split('')
+return splitted;
+}
 
 /* #lengthOfLast
  *
@@ -178,7 +184,10 @@ var splitString;
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+var lengthOfLast = function (arr){
+  result = arr.pop().length;
+  return result;
+}
 
 
 /* #sumBelowTen
@@ -188,7 +197,15 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+var sumBelowTen = function (arr){
+  result = 0;
+  for (var i=0; i<arr.length;i++){
+    if (arr[i]<10){
+      result +=arr[i];
+    }
+  }
+  return result;
+}
 
 /* #moreThanTenLetters
  *
@@ -197,7 +214,15 @@ var sumBelowTen;
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters = function (arr){
+  var result = 0;
+  for (var i=0;i<arr.length;i++){
+    result = arr[i].length>10
+
+    }
+
+  }
+}
 
 /* #multiplyAll
  *
