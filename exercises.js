@@ -149,16 +149,13 @@ var objectSize = function(obj){
  * @return {Zero}
  */
 var createZeroFilledArray = function (num){
-  finalResult = [];
-  numResult = 0;
-  for (var i = 0; i < num; i++){
-    return numResult = num.length;
-  }
-  for (var i = 0; i < numResult; i++){
-    push.finalResult[numResult[i]]
+  result = [];
+  for (var i=0; i<num; i++){
+    result.push(num[i]=0);
   }
   return result;
 }
+
 /* #poppedArray
  *
  * Takes in an array of numbers and returns an array of all but the last element of the array.
@@ -167,7 +164,8 @@ var createZeroFilledArray = function (num){
  * @return {Array}
  */
 var poppedArray = function(arr){
-    return arr.slice(0,2);
+    arr.pop();
+    return arr;
 }
 
 /* #splitString
@@ -447,14 +445,12 @@ var getKeys = function (obj){
  */
 var objectToArray = function(obj){
   result = [];
-  param = [];
-  value = [];
   for (var key in obj){
-    param.push(key);
-    value.push(obj[key]);
+    result.push(key, obj[key])
+  
     }
-result.push(param,value);
-return result;
+
+  return result;
 }
 
 /* #arrayToObject
@@ -466,7 +462,7 @@ return result;
  * @return {Object}
  */
 var arrayToObject = function (arr){
-  result = {};
+  let result = {};
   for (var i = 0; i < arr.length; i++){
     result[arr[i]] = false;
   }
@@ -568,6 +564,7 @@ var stringToKeys = function (str){
   for (var i=0; i<splitted.length;i++){
     result[splitted[i]] = true;
   }
+  console.log(result);
   return result;
 }
 
@@ -594,14 +591,17 @@ var charCountMap = function (arr){
  * @param {String}
  * @return {Bool}
  */
- var frequencyMap;
-//   var result = {};
-//   for (var i =0; i<arr.length;i++){
-//     if(arr[i] = arr[i]{
-//       result[arr[i]]
-//     }
-//   }
-// }
+ var frequencyMap = function (arr){
+  var result = {};
+  for (var i =0; i<arr.length;i++){
+    if(result[arr[i]]){
+      result[arr[i]]++;
+    } else {
+      result[arr[i]] = 1;
+    }
+}
+return result;
+ }
 
 /* #tupleConvertToObject
  *
@@ -611,7 +611,11 @@ var charCountMap = function (arr){
  * @param {String}
  * @return {Bool}
  */
-var tupleConvertToObject;
+var tupleConvertToObject = function (arr){
+ let result = {};
+
+  
+}
 
 
 module.exports = {
