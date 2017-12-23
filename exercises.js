@@ -446,8 +446,7 @@ var getKeys = function (obj){
 var objectToArray = function(obj){
   result = [];
   for (var key in obj){
-    result.push(key, obj[key])
-  
+    result.push([key, obj[key]])
     }
 
   return result;
@@ -496,7 +495,13 @@ var arraysToObject = function (arr1, arr2){
  * @param {Object}
  * @return {Array}
  */
-var objectsToTuples;
+var objectsToTuples = function (obj1, obj2){
+  result = []{
+  for (key in obj1){
+    
+  }
+  }
+}
 
 
 /* #mapArrayValues
@@ -548,6 +553,7 @@ var arrayToObjectNums = function (arr){
   for (var i=0; i<arr.length;i++){
     result[arr[i]] = true;
   }
+  console.log(result);
   return result;
 }
 
@@ -564,7 +570,6 @@ var stringToKeys = function (str){
   for (var i=0; i<splitted.length;i++){
     result[splitted[i]] = true;
   }
-  console.log(result);
   return result;
 }
 
@@ -654,7 +659,7 @@ module.exports = {
   objectsToTuples: objectsToTuples,
   mapArrayValues: mapArrayValues,
   mapStringCounts: mapStringCounts,
-  arrayToObjectNums: arrayToObject,
+  arrayToObjectNums: arrayToObjectNums,
   stringToKeys: stringToKeys,
   charCountMap: charCountMap,
   frequencyMap: frequencyMap,
